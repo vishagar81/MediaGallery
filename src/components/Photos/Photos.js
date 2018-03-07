@@ -4,7 +4,7 @@ import './Photos.css'
 // First, we extract images, onHandleSelectImage, and selectedImage from
 // props using ES6 destructuring assignment and then render.
 const Photos = ({ images, onHandleSelectImage, selectedImage, onHandleSaveImage }) => (
-  <div className="">
+  <div className="image-container">
     <h2> Images </h2>
     <div className="selected-image">
       <div key={selectedImage.id}>

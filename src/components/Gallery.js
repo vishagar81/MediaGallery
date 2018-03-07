@@ -60,28 +60,30 @@ class Gallery extends Component {
     const { images, selectedImage } = this.props;
     return (
       <div className="container-fluid">
-        {images && selectedImage ? <div>
-          <input
-            type="text"
-            ref={ref => (this.query = ref)}
-            onKeyPress= {this.handleKeyPress}
-          />
-          <input
-            type="submit"
-            className="btn btn-primary"
-            value="Search Library"
-            onClick={this.handleSearch}
-          />
-          <div className="row">
-            <Photos
-              images={images}
-              selectedImage={selectedImage}
-              onHandleSelectImage={this.handleSelectImage}
-              onHandleSaveImage={this.handleSaveImage}
+        <div className="row">
+          {images && selectedImage ? <div>
+            <input
+              type="text"
+              ref={ref => (this.query = ref)}
+              onKeyPress= {this.handleKeyPress}
             />
-            <NotificationSystem ref="notificationSystem" />
-          </div>
-        </div> : 'loading ....'}
+            <input
+              type="submit"
+              className="btn btn-primary"
+              value="Search Library"
+              onClick={this.handleSearch}
+            />
+            <div className="row">
+              <Photos
+                images={images}
+                selectedImage={selectedImage}
+                onHandleSelectImage={this.handleSelectImage}
+                onHandleSaveImage={this.handleSaveImage}
+              />
+              <NotificationSystem ref="notificationSystem" />
+            </div>
+          </div> : 'loading ....'}
+        </div>
       </div>
     );
   }
