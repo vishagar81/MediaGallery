@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Home
 const Home = () => (
-  <div className="jumbotron center">
+  <div className="center">
     <h1 className="lead">Welcome Home </h1>
     <div>
       <Link to="gallery">

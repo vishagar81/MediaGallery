@@ -1,6 +1,11 @@
 .component-container {
   margin: 0 auto;
-  width: 80%;
+  width: 40%;
+}
+
+.image-container{
+  position: absolute;
+  width: 50%;
 }
 
 .selected-image {
